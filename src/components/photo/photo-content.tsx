@@ -22,7 +22,11 @@ const PhotoContent = ({
   return (
     <div className={`${styles.photo} ${single ? styles.single : ''}`}>
       <div className={styles.img}>
-        <Image src={photo.src} alt={photo.title} width={1000} height={1000} />
+        <Image 
+					src={photo.src} 
+					alt={photo.title} 
+					width={1000} 
+					height={1000} />
       </div>
       <div className={styles.details}>
         <div>

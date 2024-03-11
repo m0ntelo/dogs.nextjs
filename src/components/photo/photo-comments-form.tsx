@@ -11,7 +11,10 @@ import React from 'react';
 function FormButton() {
   const { pending } = useFormStatus();
   return (
-    <button type="submit" className={styles.button} disabled={pending}>
+    <button 
+			type="submit" 
+			className={styles.button} 
+			disabled={pending}>
       <EnviarIcon />
     </button>
   );
@@ -46,15 +49,19 @@ export default function PhotoCommentsForm({
       action={action}
       className={`${styles.form} ${single ? styles.single : ''}`}
     >
-      <input type="hidden" name="id" id="id" value={id} />
+      <input 
+				type="hidden" 
+				name="id" 
+				id="id" 
+				value={id} />
       <textarea
         className={styles.textarea}
         name="comment"
         id="comment"
         placeholder="Comente..."
         value={comment}
-        onChange={({ target }) => setComment(target.value)}
-      ></textarea>
+        onChange={({ target }) => setComment(target.value)}>
+			</textarea>
       <FormButton />
       <ErrorMessage error={state.error} />
     </form>
